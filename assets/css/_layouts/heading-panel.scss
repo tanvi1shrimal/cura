@@ -1,0 +1,396 @@
+
+/** heading-pannel-section **/
+
+.cu-texture-bg {
+  // background: url('../images/texture-transparent.png') repeat scroll 0 0;
+  position: relative;
+}
+
+.dotted-line {
+    display: none;
+     @media(min-width:768px){
+       display: block;
+            position: absolute;
+           left: 23%;
+           bottom: -155px;
+            content: "";
+            background: url(../images/process-small.png) no-repeat;
+            margin: 0 auto;
+            height: 230px;
+            width: 100%;
+          }
+            
+        @media(min-width:1000px){
+              background: url(../images/Process-medium.png) no-repeat;
+                  bottom: -135px; 
+          }
+          @media(min-width:1200px){
+              background: url(../images/Process.png) no-repeat;
+              bottom: -150px;
+          }
+
+}
+
+ .dotted-line--reverse {
+       display: none;
+     @media(min-width:768px){
+       display: block;
+            position: absolute;
+           left: 23%;
+           bottom: -155px;
+            content: "";
+            background: url(../images/process-small--reverse.png) no-repeat;
+            margin: 0 auto;
+            height: 230px;
+            width: 100%;
+          }
+            
+        @media(min-width:1000px){
+              background: url(../images/process-medium--reverse.png) no-repeat;
+                  bottom: -135px; 
+          }
+          @media(min-width:1200px){
+              background: url(../images/Process--reverse.png) no-repeat;
+              bottom: -165px;
+          }
+ }
+
+.nav_block {
+
+    li.list-item:nth-of-type(2) .dotted-line  {
+     @media(min-width:1200px){
+              bottom: -140px;
+        }
+     
+  }
+
+  li.list-item:nth-of-type(3) .dotted-line  {
+     @media(min-width:768px){
+              bottom: -100px;
+        }
+
+     @media(min-width:1200px){
+              bottom: -90px;
+        }
+     
+  }
+
+}
+/** heading-pannel **/
+
+.cu-heading-panel {
+  padding: 40px 0;
+  position: relative;
+  @include flex;
+   @include flex-direction(column);
+  @media(min-width:768px){
+    padding: 40px 0;
+  }
+  @media(min-width:992px){
+    padding: 70px 0;
+  }  
+  &.blue-pattern {
+    background: #93a8d0 url('../images/blue-pattern.png') no-repeat scroll 0 0;
+    background-size: cover;
+      .h1 {
+        color: rgba(255, 255, 255, 0.20);
+      }
+      p {
+        color: #fff;  
+      }
+  }
+  &.orange-pattern {
+    background: #d0b05f url('../images/orange-pattern.png') no-repeat scroll 0 0;
+    background-size: cover;
+    h1{
+      color: rgba(255, 255, 255, 0.20);
+    }
+    p {
+      color: #f6ead8;
+    }
+  }
+  &.green-pattern {
+    background: #9ac993 url('../images/green-pattern.png') no-repeat scroll 0 0;
+    background-size: cover;
+    .h1 {
+      color: rgba(255,255,255,0.30);
+    }
+    p {
+      color: #fff;
+    }
+  }
+  &.silver-patter{
+    background: #dbbc6c url('../images/silver-pattern.png') no-repeat scroll 0 0;
+    background-size: cover;
+    color: $white;
+    h1{
+      color: rgba(231,209,155, 0.6);
+    } 
+  }
+    @media(max-width:767px){
+     &.silver-patter, &.green-pattern, &.orange-pattern, &.blue-pattern {
+      .row{
+        margin:0;
+      }
+    }
+  }
+  
+	.heading-panel-content {
+		p {
+			font-family: 'Omnes-Light';
+			span {
+				color: $white;
+			}
+		}
+	}	
+}
+.cu-heading-panel {
+  article{
+    p{
+      margin: 10px 0 0;
+      font-family: 'Omnes-Regular';
+      @media(min-width:768px){
+        margin: 10px 0 25px 0px;
+      }
+    }
+  }
+  p{
+    margin: 10px 0 25px 0px;
+    font-family: 'Omnes-Regular';
+  }
+}
+
+/** cu-process heading-pannel-section **/
+
+.final-outcome {
+  @media(min-width:768px){
+     padding-top:30px;
+  }
+   @media(min-width:992px){
+     padding-top:50px;
+  }
+ 
+}
+.cu-process{
+  position: relative;
+  padding:0;
+  article{
+    p{
+      color: $gray-lite;
+     }
+     .text_clr_black{
+       color: $black-lite;
+     }
+  }
+   // list-items   
+  .mouse_scroll-down {
+    bottom: 0px;
+  }
+}
+ // list-items 
+  .nav_block{
+    padding: 30px 0;
+    @media(min-width:768px){
+      padding: 40px 0;
+    }
+    @media(min-width:992px){
+      padding: 40px 0 50px;
+    }
+    li.list-item{
+      position:relative;
+      @include flex;
+      @include align-items(center);
+      margin-bottom: 0px;
+      padding: 40px 0;
+      // overflow: hidden;
+      
+      &:last-of-type {
+          @media(min-width:768px){
+           padding: 40px 0 60px 0;
+         }
+         @media(min-width:992px){
+           padding: 0px 0 45px 0;
+         }
+      }
+
+      @media(max-width:767px){
+        padding: 10px 0 0px 0;
+        margin-bottom: 30px;
+      }
+
+       @media(min-width:992px){
+        padding:0;
+      }
+
+      h3{
+        // font-family: 'Domine-Regular';
+        font-family: 'Domine-Regular';
+        margin-bottom: 30px;
+        @media (min-width:768px) and (max-width: 991px){
+          margin-bottom: 15px;
+        }       
+      }
+      img{
+        margin:0 auto;
+      }  
+      .list-group-item{
+        font-family: inherit;  
+        span{
+          padding-right: 0;         
+        }
+      }    
+      &:nth-child(even){
+        @media(max-width:767px){
+          @include flex-direction(column);
+        }
+      }
+      &:nth-child(odd){
+        @media(max-width:767px){
+          @include flex-direction(column-reverse);
+        }
+      }
+      &.overlay-bg2 {
+        background: url('../images/how-overlay-bottom-bg.png') no-repeat scroll bottom center;
+        background-size: contain;
+        // @media (min-width:768px) and (max-width: 991px){
+        //   margin-bottom: 10px;
+        // }  
+      }
+    }   
+ } 
+
+ // .dotted-lines {
+ //        position:relative;
+
+ // //      &::after {
+ // //          @media(min-width:768px){
+ // //            position: absolute;
+ // //            left: 50%;
+ // //            bottom: 0;
+ // //            content: "";
+ // //            background: url(../images/process-small.png) no-repeat;
+ // //            margin: 0 auto;
+ // //            transform: translateX(-25%) translateY(155px);
+ // //            height: 230px;
+ // //            width: 100%;
+ // //          }
+            
+ // //        @media(min-width:1000px){
+ // //              background: url(../images/Process-medium.png) no-repeat;
+ // //          }
+ // //          @media(min-width:1200px){
+ // //              background: url(../images/Process.svg) no-repeat;
+ // //          }
+ // //      }
+
+ // }
+
+
+
+// @media (min-width: 768px) {
+//   .dashed-line {
+//     position: relative;
+//     &.bottom {
+//       &::after {
+//         content: "";
+//         position: absolute; 
+//         bottom: 22px;
+//         height: 100%;
+//         border-left: 1px dashed #999;
+//         @include translate(0,100%);
+//       }
+//     }
+//     &.top {
+//       &::before {
+//         content: "";
+//         position: absolute; 
+//         top: 0px;
+//         height: 100%;
+//         border-left: 1px dashed #999;
+//         @include translate(0,-100%);
+//       }
+//     }  
+//   }
+//   .straight-line-left {
+//     position: relative;
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       bottom: -40px;
+//       width: 100%;
+//       transform: translate(50%,0);
+//       left: 0;
+//       border-top: 1px dashed #999;
+//     }
+//   }
+//   .straight-line-right {
+//     position: relative;
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       bottom: -40px;
+//       width: 100%;
+//       transform: translate(-50%,0);
+//       left: 0;
+//       border-top: 1px dashed #999;
+//       @media (min-width: 1200px) {
+//         bottom: -57px;
+//       }
+//     }
+//   }
+//   .dashed-line-article {
+//     position: relative;
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       top: 0px;
+//       left: 24%;
+//       height: 39%;
+//       border-left: 1px dashed #999;
+//       @include translate(0,-100%);
+//       @media (min-width: 1200px) {
+//         // bottom: -57px;
+//       }
+//     }
+//   }
+// }
+
+/** career-section **/
+  
+.cu-career-section{
+  @extend .cu-process;
+  .mouse_scroll-down {
+    bottom: 0px;
+  }
+}
+
+/** cu-disruptors heading-pannel-section **/
+  
+.cu-disruptors{
+  // @extend .cu-heading-panel;
+  padding:0;
+  p {
+    color: $black-thick;
+    font-family: 'Omnes-Light';
+   @extend h3;
+  }
+  .text_clr_black{
+    color: $black-lite;
+  }
+}
+
+
+/** cu-contact heading-pannel-section **/
+  
+.cu-contact{
+  // @extend .cu-heading-panel;
+  p {
+    color: $black-thick;
+    font-family: 'Omnes-Light';
+    @extend h3;
+    padding-right: 20px;
+  }
+  .text_clr_black{
+    color: $black-lite;
+  }
+}

@@ -1,0 +1,60 @@
+.cu-overlay-content {
+	@media(min-width:768px){
+	  // margin-top: -30px;
+	}
+	&.shift-left-panel {
+	margin-left: 0em;
+	}
+	&.shift-right-panel {
+	margin-right: 0em;
+	}
+	.cu-process-section {
+	 padding: 45px 0;
+  	@media(min-width:992px){
+  	  padding: 40px 0 70px 0;
+  	}
+
+	}
+	.cu-info-section {
+		padding: 40px 0px;
+		&.overlay-bg {
+			background: url('../images/overlay-bg.png') no-repeat scroll top center;
+			background-size: contain;
+		}
+		&.overlay-bg1 {
+			background: url('../images/how-overlay-top-bg.png') no-repeat scroll top center;
+			background-size: contain;
+		}
+	@media(min-width:768px){
+	    padding: 50px 0;
+	 }
+	 @media(min-width:992px){
+	     padding: 70px 0;
+	  }  
+	}
+	h1 {
+	color: rgba(55,79,124,.10);
+	}
+	 @media(min-width:992px){
+	   &.shift-left-panel {
+	       margin-left: 4em;
+	     }
+	     &.shift-right-panel {
+	       margin-right: 4em;
+	     }
+	 }	
+}
+
+//overlay 
+
+.overlay-bg {
+    background: url('../images/overlay-bg.png') no-repeat scroll top center;
+    background-size: contain;
+    .nav_block{
+      padding-bottom: 0;
+      li.list-item{
+        margin-bottom: 0;
+      }
+    }
+ }
+

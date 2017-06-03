@@ -1,0 +1,104 @@
+.panel-cust {
+	&.panel-default {
+		border: 0;
+		border-radius: 0;
+    box-shadow: none;
+    
+    // pannel-heading    
+		> .panel-heading {
+			border: 0;
+			border-radius: 0;
+			display: block;
+			-webkit-transition: all 0.7s;
+	    -moz-transition: all 0.7s;
+	    -o-transition: all 0.7s;
+	    transition: all 0.7s;		
+	    background: #eaece3;
+	    padding: 0;
+			.panel-title {
+				@extend .omens-medium;
+				padding: 8px 15px;
+				font-size: 16px;
+				line-height: 26px;
+				color: #69ac5e;
+				text-transform: uppercase;
+			}
+			&.active {
+				display: none;
+				-webkit-transition: all 0.7s;
+		    -moz-transition: all 0.7s;
+		    -o-transition: all 0.7s;
+		    transition: all 0.7s;
+			}
+			// responsive
+			@media(min-width:768px){
+			  .panel-title{
+			  	padding: 15px 24px;
+			    font-size: $fnt-xs;
+			    line-height: 26px;
+			  }
+			}
+			@media(min-width:992px){
+			  .panel-title{
+			  	padding: 15px 35px;
+          font-size: 20px;
+          line-height: 30px
+        }
+			}
+		}
+		
+		//pannel-body		
+		.panel-body {
+			border: 0 !important;
+			font-size: $fnt-xxs;
+			color: $black-lite;
+			line-height: 24px;
+			position: relative;
+			padding: 20px 15px;
+			background-color: rgba(239, 239, 239, 0.7);
+			@extend .omens-regular;
+			@media(min-width:768px){
+			  padding: 25px 25px 25px 25px;
+			  font-size: $fnt-xs;
+			  line-height: 28px;
+			}
+			@media(min-width:992px){
+				padding:35px 35px;
+				font-size: $fnt-sm;
+				line-height: 32px;
+				min-height: 255px;
+			}
+		}
+		//pannel-body end
+	}
+}
+
+
+.move-text {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+   font-family: FontAwesome;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+
+.panel-cust:hover, .panel-cust:focus, .panel-cust:active {
+
+	.move-text{
+	  -webkit-animation-name: hvr-icon-wobble-horizontal;
+	  animation-name: hvr-icon-wobble-horizontal;
+	  -webkit-animation-duration: 1s;
+	  animation-duration: 1s;
+	  -webkit-animation-timing-function: ease-in-out;
+	  animation-timing-function: ease-in-out;
+	  -webkit-animation-iteration-count: 1;
+	  animation-iteration-count: 1;
+	}
+}

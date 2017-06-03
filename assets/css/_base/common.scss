@@ -1,0 +1,193 @@
+  
+/**   Common css for all the pages   **/
+
+ // Font-weights  
+    
+  $font-light: 300; 
+  $font-medium: 500;
+  
+  //font-sizes 
+  
+  $fnt-xxs: 14px;
+  $fnt-xs: 18px;
+  $fnt-sm: 22px; 
+  $fnt-md: 24px;
+
+  //brand-colors 
+  
+  $brand: #e2714f;
+  
+  $lite-blue: #374f7c;
+   
+  $lite-sliver: #d7bb73;
+  
+  $gray: #eeeeee;
+ 
+  // colors 
+  
+  $white: #ffffff;
+  $gray-lite: #666666;
+  $black-lite: #333333;
+  $black-thick: #999999;
+  
+/** Omnes-Medium **/
+  
+  .omens-medium{
+     font-family: 'Omnes-Medium';
+  }
+  .omens-light, .cu-fnt-sm{
+    font-family: 'Omnes-Light';
+  }
+  .omens-regular {
+    font-family: 'Omnes-Regular';
+  }
+  .Domine-reguler{
+    font-family: 'Domine-Regular';
+  }
+  .position--relative{
+    position: relative;
+  }
+  .display_flex{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  // overflow
+  
+  .cu-overflow{
+    overflow: hidden;
+  }
+  
+  // .cu-feature-img{
+  //   @media(min-width:400px){
+  //       height: 410px;  
+  //   }
+  //   @media(min-width:768px){
+  //     height:auto;
+  //   }
+  //    @media(min-width:992px){
+  //       height: 300px;  
+  //   }
+
+  // }
+
+  .cu-feature-img--medium{
+    @media(min-width:400px){
+         height: 300px;
+    }
+    @media(min-width:768px){
+      height:auto;
+    }
+     @media(min-width:992px){
+        height: 500px;  
+    }
+
+  }
+
+    .cu-feature-img--medium1{
+    @media(min-width:400px){
+         height: 300px;
+    }
+    @media(min-width:768px){
+      height:auto;
+    }
+     @media(min-width:992px){
+        height:450px;  
+    }
+
+  }
+
+
+
+
+ /*
+ ========================================================================
+ Typographs css
+ ------------------------------------------------------------------------
+ */
+
+body {  
+  background-color: #e5e5e4; 
+  overflow-x: hidden;
+} 
+ 
+h1{
+   font-size: 28px; 
+   line-height: 32px;
+  @media(min-width:768px){
+    font-size: 55px; 
+    line-height: 62px;
+  }   
+}
+
+h2{
+  font-size: 45px; 
+  line-height: 55px;
+}
+
+h3, .cu-fnt-sm, .heading-desc{
+  font-size: 18px; 
+  line-height: 26px;
+  @media(min-width:768px){
+    font-size: 22px; 
+    line-height: 32px;
+  }
+  @media(min-width:992px){
+    font-size: 30px; 
+    line-height: 38px;
+  }
+}
+
+// classes font-size
+
+.h1{
+  font-size: 40px; 
+  line-height: 46px;
+  @media(min-width:768px){
+    font-size: 80px; 
+    line-height: 90px;
+  }
+  @media(min-width:992px){
+    font-size: 110px; 
+    line-height: 130px;
+  }
+  @media(min-width:1199px){
+    font-size: 120px; 
+    line-height: 130px;
+  }
+}
+
+.h2{
+    font-size: 110px; 
+    line-height: auto;
+}
+.h3{
+  font-size: 22px;
+  line-height: 32px;
+  @media(min-width:768px){
+    font-size: 24px;
+    line-height: 34px;
+  }
+  @media(min-width:992px){
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+
+/** commonly used elements **/
+
+.theme--white{
+  background-color: $white; 
+}
+
+/** flex-position-center **/
+  
+ // screen-size
+  
+ .container-fluid{
+   width: 1400px;
+   max-width: 100%;
+   margin: 0 auto;
+ }

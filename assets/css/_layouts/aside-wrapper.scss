@@ -1,0 +1,183 @@
+
+/** aside-nav **/
+.aside-container {
+  @include flex;
+  // @include align-items(center);
+  @include justify-content(center);
+  position: fixed;
+  width: 4em;
+  right:0;
+  height: 100%;
+  top: 0;
+  z-index: 99;
+  // .fixed-side_nav{
+  //   width: 4em;
+  //   // position: fixed;
+  //   // height: 100%;
+  //   // top: 0;      
+  //   // @include justify-content(center);
+  // }
+}
+
+/** aside-indicators **/
+
+.section-bullets {
+  -webkit-transition-duration: .3s;
+  -moz-transition-duration: .3s;
+  -ms-transition-duration: .3s;
+  -o-transition-duration: .3s;
+  transition-duration: .3s;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  text-align: right;
+  li {
+      height: 15px;
+    a {
+      display: inline-block;
+      height: 3px;
+      width: 12px;
+      margin: 0;
+      position: relative;   
+      text-align: right;
+      background-color: #95b8c9;
+      border-radius: 25%;
+      span {
+        position: relative;
+        white-space: nowrap;
+        padding: 5px 12px;
+        background: #fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        top: 50%;
+        right: 38px;
+        display: block;
+        min-width: 100px;
+        max-width: none;
+        margin: -15px 0 0;
+        text-align: center;
+        opacity: 0;
+        line-height: 20px;
+        visibility: hidden;
+        @include transition(all .3s ease);
+        -webkit-transform: translateX(-70px);
+        -moz-transform: translateX(-70px);
+        -ms-transform: translateX(-70px);
+        -o-transform: translateX(-70px);
+        transform: translateX(-70px);
+        cursor: pointer;
+        &:after {
+          content: ' ';
+          position: absolute;
+          right: -3px;
+          top: 50%;
+          margin-top: -5px;
+          border: 5px solid #000;
+          border-color: transparent transparent #fff #fff;
+          box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.1);
+          -webkit-transform: rotate(-135deg);
+          -moz-transform: rotate(-135deg);
+          -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+        }
+      }
+    }
+    &.active {
+      a {
+        background: #e2714f;
+        width: 25px;
+      }
+    }
+    &:hover {
+      a {
+        span {
+          -webkit-transform: translateX(-78px);
+          -moz-transform: translateX(-78px);
+          -ms-transform: translateX(-78px);
+          -o-transform: translateX(-78px);
+          transform: translateX(-78px);
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.section-bullets li {
+  &:nth-child(1), &:nth-child(2) {
+    &.active, &:hover {
+      a {
+        background-color: #e2714f;
+        span {
+          color: #e2714f;
+        }
+      }
+    }
+  }
+  &:nth-child(3), &:nth-child(7) {
+    &.active, &:hover {
+      a {
+        background-color: #cc9813;
+        span {
+          color: #cc9813;
+        }
+      }
+    }
+  }
+  &:nth-child(4), &:nth-child(5) {
+    &.active, &:hover {
+      a {
+        background-color: #6d86b4;
+        span {
+          color: #6d86b4;
+        }
+      }
+    }
+  }
+  &:nth-child(6) {
+    &.active, &:hover {
+      a {
+        background-color: #f67249;
+        span {
+          color: #f67249;
+        }
+      }
+    }
+  }
+  &:nth-child(8) {
+    &.active, &:hover {
+      a {
+        background-color: #85ba7d;
+        span {
+          color: #85ba7d;
+        }
+      }
+    }
+  }
+}
+
+#toast-container {display: none;}
+
+//onHover make indicator-name visible
+
+.section-bullets {
+  li.active {
+    span {
+      // opacity: 1;
+      // visibility: visible;
+      animation : fadeInIndicators 6s;
+    }
+  } 
+}
+
+@-webkit-keyframes fadeInIndicators { 
+
+  0% {
+      opacity: 1;
+      visibility: visible;
+  }
+
+  50% {
+     opacity: 0;
+      visibility: hidden;
+  }
+}

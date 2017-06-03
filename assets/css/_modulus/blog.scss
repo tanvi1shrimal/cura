@@ -1,0 +1,140 @@
+// blog-latest 
+
+.cu-card{
+  .cu-fnt-sm{
+    display: block;
+  }
+  //card view 
+   .cu-view {
+      background: #fcf8f0;
+    }       
+  // cu-blog-list    
+  .cu-blog-list{
+     @include flex;
+     @include flex-direction(column);
+     margin-bottom: 50px;
+     li{
+       padding-bottom: 40px;
+       border-bottom: 1px solid #eaeaea;
+       margin-bottom: 40px;
+       &:last-child{
+         border-bottom: none;
+         margin-bottom: 0;
+         @media(max-width:767px){
+           padding-bottom: 0;
+         }         
+       }
+        @media(min-width:768px){
+          border: none;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+     }
+  }
+  
+  h4{
+    font: {
+      size: 20px;
+      family: 'Domine-Regular';
+    }
+    line-height: 30px;
+    margin: 20px 0 25px 0;
+  }
+  
+  //tablet and Desktop version 
+  
+   @media(min-width:768px){
+     margin-left:0;
+     margin-right: 0;
+     .card-review{
+       padding: 70px 0 30px 0;
+     }
+     .cu-blog-list{
+        margin-bottom: 50px;
+     }
+     .cu-blog-list{
+       @include flex-direction(inherit);
+     }
+     h4{
+       font: {
+          size: $fnt-md;
+       }
+       line-height: 34px;
+        margin: 25px 0 35px 0;       
+     }     
+   }
+    // @media(max-width:767px){
+       // margin: -20px 15px 0 15px;
+    // }  
+}
+
+
+// medium svg-text css 
+
+
+.nav-profile-categories__item:focus {
+  outline: 0;
+}
+.svgIcon--logoNew path:nth-child(1) {
+  fill: #d0d2d3;
+}
+.svgIcon--logoNew path:nth-child(2) {
+  fill: #a6a8ab;
+}
+.svgIcon--logoNew path:nth-child(3) {
+  fill: #808184;
+}
+.svgIcon--logoNew path:nth-child(4) {
+  fill: #58595b;
+}
+.svgIcon--logoNew:hover path:nth-child(1),
+.svgIcon--logoNew:hover path:nth-child(2),
+.svgIcon--logoNew:hover path:nth-child(3),
+.svgIcon--logoNew:hover path:nth-child(4){  
+    transition: transform 0.6s;
+ }
+
+.svgIcon--logoNew:hover path:nth-child(1){
+    fill: #14fc7d;
+}
+.svgIcon--logoNew:hover path:nth-child(2){
+    fill: #0be370;
+}
+.svgIcon--logoNew:hover path:nth-child(3) {
+  fill: #14c767;
+}
+.svgIcon--logoNew:hover path:nth-child(4) {
+  fill: #00ab6c;
+}
+.siteNav-logo{
+    display: flex;
+    align-items: center;
+  .Medium-icon-text{
+     font-size: $fnt-sm;
+     line-height: 30px;
+     color: #808080;
+     margin-left: 8px;
+     font-family: 'Omnes-Medium';
+     display: flex;
+  }
+}
+// patch
+
+.cu-patch{
+      padding: 20px;
+      margin: 0 0px 40px 0px;   
+     // more than tablets       
+     @media(min-width:768px){    
+      padding: 40px 35px 20px 35px;     
+      margin: 0;
+      border: none;
+      .cu-link{
+        margin: 25px 0;
+      }
+     }
+     @media(max-width:767px){
+       .cu-link{
+         margin: 20px 0 10px 0;
+       }
+     }
+}

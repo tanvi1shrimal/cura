@@ -1,0 +1,48 @@
+
+ /** banners for entire website **/
+  
+ @each $banners in main-banner, docotors-banner, career-banner  {
+   .#{$banners} {
+     background-image: url('../images/#{$banners}.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+}
+ /** main-banner **/
+     
+ .main-banner{
+   margin-top: -25px;
+   height: 100vh;  
+    .mouse_scroll-down {
+     bottom: 0px;
+    }
+}
+
+// Docotors-banner
+
+.docotors-banner{
+   height: 320px;
+  @media(min-width:768px){
+    height: 507px; 
+  }
+}
+
+// Career-banner
+
+.career-banner {
+    height: 300px;
+  @media(min-width:768px){
+    height: 405px;     
+  }
+}
+
+// background scroller animation 
+
+.docotors-banner, .career-banner, .main-banner{
+   // background-attachment: fixed;
+   background-position-x: 50% !important; 
+     @media(min-width:768px){
+       background-attachment: fixed;
+  }
+} 
+
